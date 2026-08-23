@@ -11,6 +11,10 @@ sudo chmod +x /usr/local/bin/sitemplate
 ```
 sudo curl -#fL https://raw.githubusercontent.com/iineolineii/sitemplate/refs/heads/main/server.conf --output /etc/nginx/snippets/server.conf.template
 ```
+4. Download the TLS termination proxy headers snippet to `/etc/nginx/snippets/`:
+```
+sudo curl -#fL https://raw.githubusercontent.com/iineolineii/sitemplate/refs/heads/main/proxy-headers-https.conf --output /etc/nginx/snippets/proxy-headers-https.conf
+```
 
 # Usage
 1. Generate the Nginx configuration file for your website, for example:
