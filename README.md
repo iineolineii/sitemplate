@@ -1,19 +1,24 @@
-# Prerequisites
-## Required:
+## Table of contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Prerequisites
+### Required:
 - Nginx
 - GNU gettext `envsubst` utility
 - Bash
 
-## Recommended, but can be changed from a template:
+### Recommended, but can be changed from a template:
 - TLS certificate (`fullchain.pem` and `privkey.pem` under `/etc/letsencrypt/live/<DOMAIN>/`)
 - Nginx daemon configured to include configuration files from `/etc/nginx/sites-enabled`
 - Capability to open TCP port 443 on all interfaces
 
-## Optional, used primarily for installation:
+### Optional, used primarily for installation:
 - sudo
 - curl
 
-# Installation
+## Installation
 1. Download the script to `/usr/local/bin/`:
 ```
 sudo curl -#fL https://raw.githubusercontent.com/iineolineii/sitemplate/refs/heads/main/sitemplate.sh --output /usr/local/bin/sitemplate
@@ -31,7 +36,7 @@ sudo curl -#fL https://raw.githubusercontent.com/iineolineii/sitemplate/refs/hea
 sudo curl -#fL https://raw.githubusercontent.com/iineolineii/sitemplate/refs/heads/main/proxy-headers-https.conf --output /etc/nginx/snippets/proxy-headers-https.conf
 ```
 
-# Usage
+## Usage
 1. Generate the Nginx configuration file for your website, for example:
 ```
 sudo sitemplate git git.mysite.org 127.0.0.1:8000
