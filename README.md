@@ -1,3 +1,18 @@
+# Prerequisites
+## Required:
+- Nginx
+- GNU gettext `envsubst` utility
+- Bash
+
+## Recommended, but can be changed from a template:
+- TLS certificate (`fullchain.pem` and `privkey.pem` under `/etc/letsencrypt/live/<DOMAIN>/`)
+- Nginx daemon configured to include configuration files from `/etc/nginx/sites-enabled`
+- Capability to open TCP port 443 on all interfaces
+
+## Optional, used primarily for installation:
+- sudo
+- curl
+
 # Installation
 1. Download the script to `/usr/local/bin/`:
 ```
